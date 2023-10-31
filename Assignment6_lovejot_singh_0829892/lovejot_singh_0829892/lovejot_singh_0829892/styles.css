@@ -1,0 +1,115 @@
+body {
+    background-color: rgba(241, 116, 32, 0.85);
+}
+
+h1 {
+    font-size: 45pt;
+    color: white;
+    text-align: center;
+  
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    width: 60%;
+}
+
+label {
+    font-size: 24px;
+width: auto;
+text-align: left;
+}
+
+ .two-column-form {
+    width: 45%;
+    text-align: right;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+} 
+
+input[type="submit"] {
+    width: 20%;
+    height: 3em;
+    align-self: center;
+    border-radius: 100px;
+    text-align: center;
+    border: 0;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+input, textarea {
+    margin: 15px 0px;
+    padding: 6px;
+    border-radius: 5px;
+    border: 0;
+}
+
+
+
+footer p {
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    padding: 6px 0px;
+}
+
+
+/*phone display*/
+@media screen and (max-width: 600px)
+{
+    header,footer { 
+    background-color: rgb(2, 2, 2)
+} 
+    input[type="submit"]{
+        width: 30%;
+    }
+    .two-column-form {
+        display: flex;
+        justify-content: space-between; /* This will create a two-column layout */
+    }
+    
+    .column {
+        flex: 1; /* Each column takes up half the available space */
+        padding: 0 10px; /* Add some spacing between columns */
+    }
+    
+    
+}
+
+/*desktop display*/
+ @media screen and (min-width: 601px)
+
+{
+    header,footer { 
+    background-color: rgb(253, 105, 6)
+    }
+ 
+    body {
+        background-color: rgba(48, 51, 53, 0.85);
+        min-width: 480px;
+    }
+    
+    button {
+        width: 90%;
+        margin-bottom: 5px;
+    }
+
+    label {
+        font-size: 27px;
+    }
+    div{
+        display: flex;
+        justify-content: space-between;
+    }
+    article {
+        margin:2px;
+    }
+} 
