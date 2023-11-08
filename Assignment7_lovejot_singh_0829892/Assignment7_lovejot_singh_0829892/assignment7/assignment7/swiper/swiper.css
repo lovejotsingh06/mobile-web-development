@@ -1,0 +1,122 @@
+h1 {
+    text-align: center;
+    font-size: 15px;
+    background-color: rgb(224, 103, 103);
+    font-size: xx-large;
+}
+
+footer{
+    text-align: center;
+    font-size: 15px;
+    background-color: rgb(224, 103, 103);
+    font-size: xx-large;
+}
+
+#submit{
+    font-size: large;
+   
+}
+
+h2 {
+    font-size: 18px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    width: 60%;
+}
+
+.two-column-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    font-size: 24px;
+    text-align: left;
+}
+
+input {
+    border: 0;
+    width: 100%;
+}
+
+.form-container {
+    background-color: antiquewhite;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 25px;
+    flex: 1;
+}
+
+.swiper-container {
+    text-align: center;
+    width: 60%;
+  /*   background-color: beige; */
+    border: 7px;
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+}
+
+button[type="submit"] {
+    color: rgb(204, 136, 136);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: rgb(96, 187, 223);
+}
+
+@media only screen and (min-width: 601px){
+    body{
+       background-color:rgb(214, 203, 106);
+   }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: rgb(78, 130, 146) !important;
+    }
+    h1{
+        text-align: center;
+        font-size: 15px;
+        background-color: rgb(224, 103, 103);
+        font-size: xx-large;
+    }    
+        h2 {
+            font-size: 16px; 
+        }
+    
+        form {
+            width: 90%; 
+        }
+        input[type="submit"]{
+            width: 30%;
+        }
+        .two-column-form {
+            display: flex;
+            justify-content: space-between; 
+        }
+        
+        .column {
+            flex: 1; 
+            padding: 0 10px; 
+        }
+        
+    
+    
+}
+
+

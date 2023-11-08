@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="form.js"></script>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h1>Lovejot Singh</h1>
+    
+           <form action="#" method="get" class="two-column-form">
+        
+            <label for="School Name">Name of School:</label>
+            <input type="text" id="schoolName" name="schoolName" required>
+        
+         
+            <label for="dateOfJoining">Date of Joining:</label>
+            <input type="date" id="dateOfJoining" name="dateOfJoining" required>
+        
+
+        
+            <label>Graduated:</label>
+            <div class="radiobox">
+             <label for="yes">Yes</label>
+             <input type="radio" id="yes" name="agreement" value="yes">
+             <label for="no">No</label>
+             <input type="radio" id="no" name="agreement" value="no">
+             </div>
+</form>
+
+        <!--step 2-->
+        
+        <form action="#" method="get" class="two-column-form">
+        <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+
+     
+            <label for="tel">Phone:</label>
+            <input type="text" id="tel" name="phone" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="123-456-7890" 
+            oninvalid="this.setCustomValidity('Please enter a valid phone number (e.g., 123-456-7890)')"
+            oninput="this.setCustomValidity('')"required>
+        
+
+            <label for="CanadaZipCode">Zip Code (Canada)</label>
+            <input type="text" id="CanadaZipCode" name="CanadaZipCode" placeholder="N1A-1P1" required pattern="[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d"
+            oninvalid="setCustomValidity('Please enter a valid Canada zip code (e.g., N1A 1P1)')"
+            oninput="setCustomValidity('')"required>
+</form>
+
+            <!--step 3-->
+
+            <form action="#" method="get" class="two-column-form">
+            <label for="creditCard">Credit Card Number:</label>
+            <input type="text" id="creditCard" name="creditCard" data-validate="required creditCard">
+        
+
+       
+            <label for="expirationDate">Expiration Date:</label>
+            <input type="date" id="expirationDate" name="expirationDate" required>
+       
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" data-validate="required cvv">
+            </form>
+        
+            <input type="submit" value="Submit" id="submit">
+        </div>
+    </form>
+</body>
+</html>
