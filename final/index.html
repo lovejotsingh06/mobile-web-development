@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Responsive Real Estate Website</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        /* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Global styles */
+body {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #35424a;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Breadcrumbs styles */
+.breadcrumb {
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.breadcrumb-item a {
+    color: #35424a;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #007bff;
+}
+
+/* Image Navbar styles */
+.image-navbar {
+    background-color: #007bff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-navbar img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.image-navbar img:hover {
+    opacity: 0.7;
+}
+
+/* Carousel styles */
+.carousel-inner img {
+    width: 100%;
+}
+
+/* Card styles */
+.card {
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card .btn-secondary {
+    background-color: #007bff;
+    border: none;
+}
+
+/* Form styles */
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+/* Add your custom styles here */
+
+/* Example: Style specific elements */
+.custom-element {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px;
+}
+
+/* Example: Style headings */
+h1, h2, h3 {
+    color: #007bff;
+}
+
+/* Add more custom styles as needed */
+
+</style>
+
+
+</head>
+
+<body>
+
+    <!-- Bootstrap Breadcrumbs -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Homes for Sale</a></li>
+            <li class="breadcrumb-item"><a href="#">Homes for Rent</a></li>
+            <li class="breadcrumb-item"><a href="#">Mortgage Calculator</a></li>
+        </ol>
+    </nav>
+
+    <!-- Image Navbar -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="image-navbar">
+                    <img src="profile-icon.png" alt="Profile Icon">
+                    <img src="favorite-icon.png" alt="Favorite Icon">
+                    <img src="bookmark-icon.png" alt="Bookmark Icon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="img1.jpeg" alt="House 1">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img2.jpeg" alt="House 2">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img3.jpeg" alt="House 3">
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Cards -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="homes.jpeg" class="card-img-top" alt="Card Image 1">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top"
+                            title="Description 1">More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images.jpeg" class="card-img-top" alt="Card Image 2">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top"
+                            title="Description 2">More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images2.jpeg" class="card-img-top" alt="Card Image 3">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top"
+                            title="Description 3">More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Form -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form id="realEstateForm">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" required minlength="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Comments</label>
+                        <textarea class="form-control" id="comments" name="comments" minlength="6"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();   
+        });
+
+        <!-- Custom JavaScript -->
+
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+    });
+
+    /* Add any additional custom JavaScript here */
+    
+    // Example: Add an alert when the Submit button is clicked
+    $('#realEstateForm').submit(function(event) {
+        event.preventDefault();
+        alert('Form submitted!');
+    });
+
+    // Example: Toggle a class on the image-navbar icons when clicked
+    $('.image-navbar img').click(function() {
+        $(this).toggleClass('active');
+    });
+
+    // Add more custom JavaScript functionality as needed
+
+    // Your additional custom JavaScript code goes here
+
+</script>
+
+
+
+</body>
+
+</html>
